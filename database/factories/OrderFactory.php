@@ -17,7 +17,8 @@ class OrderFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'order_ref' => $this->faker->uuid(),
+            'customer_name' => $this->faker->name(),
         ];
     }
 }
