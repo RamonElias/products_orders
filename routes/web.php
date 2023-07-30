@@ -35,4 +35,8 @@ Route::middleware(['auth:sanctum', config('jetstream.auth_session'), 'verified']
 
         return view('total', compact('orders_total_sum'));
     })->name('total');
+
+    Route::get('/orders', function () {
+        return view('orders');
+    })->name('orders');
 });
